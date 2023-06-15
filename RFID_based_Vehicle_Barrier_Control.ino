@@ -28,7 +28,7 @@ pinMode(y_led, OUTPUT);
 pinMode(r_led, OUTPUT);
 
 pinMode(servo, OUTPUT);
-servoPulse(servo, 35); 
+servoPulse(servo, 30); 
 
 digitalWrite(g_led, 0);
 digitalWrite(y_led, 0);
@@ -46,13 +46,13 @@ void loop() {//Wait until new tag is available
       digitalWrite(g_led, 1);
       digitalWrite(y_led, 0);
       digitalWrite(r_led, 0);
-      for(int angle=35; angle<=140; angle++){servoPulse(servo, angle);}
+      for(int angle=30; angle<=140; angle++){servoPulse(servo, angle);}
       delay(5000);
       digitalWrite(g_led, 0);
       digitalWrite(y_led, 1);
       digitalWrite(r_led, 0);
       delay(1000);
-      for(int angle=140; angle>=35; angle--){servoPulse(servo, angle);}
+      for(int angle=140; angle>=30; angle--){servoPulse(servo, angle);}
       i=Set;
      }
     }
